@@ -1,0 +1,32 @@
+{
+  "aws": {
+    "s3": {
+      "media": {
+        "name": "attendance-media",
+        "region": "us-east-1"
+      }
+    },
+    "sqs": {
+      "eventqueue": {
+        "endpoint": "https://",
+        "region": "us-east-1"
+      }
+    }
+  },
+  "pg": {
+    "databases": {
+      "attendance": {
+        "host": "postgres",
+        "port": 5432,
+        "database": "attendance",
+        "user": "postgres",
+        "password": "postgres"
+      }
+    }
+  },
+  "bunyan": {
+    "name": "attendance-node",
+    "level": "trace"
+  }
+}
+

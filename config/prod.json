@@ -1,0 +1,35 @@
+{
+  "aws": {
+    "s3": {
+      "media": {
+        "region": "us-east-1"
+      }
+    },
+    "sqs": {
+      "eventqueue": {
+        "endpoint": "https://",
+        "region": "us-east-1"
+      }
+    },
+    "creds": {
+      "accessKeyId": "{AWS_ACCESS_KEY_ID}",
+      "secretAccessKey": "{AWS_SECRET_ACCESS_KEY}"
+    }
+  },
+  "pg": {
+    "databases": {
+      "attendance": {
+        "host": "{DB_URL}",
+        "port": 6432,
+        "database": "attendance",
+        "user": "{DB_USER}",
+        "password": "{DB_PASS}"
+      }
+    }
+  },
+  "bunyan": {
+    "name": "attendance-node",
+    "level": "trace"
+  }
+}
+

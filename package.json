@@ -1,0 +1,45 @@
+{
+  "name": "attendance-api",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "async": "^2.3.0",
+    "axios": "^0.18.0",
+    "bunyan": "^1.8.10",
+    "config": "^1.25.1",
+    "http-proxy": "^1.17.0",
+    "jimp": "^0.2.28",
+    "jpeg-autorotate": "^3.0.1",
+    "lambda-proxy-utils": "^1.2.4",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "moment-timezone": "^0.5.14",
+    "parse-multipart": "^1.0.4",
+    "serverless-mocha-plugin": "^1.9.0",
+    "zencoder": "^1.1.0",
+    "i18n": "^0.8.3",
+    "pg": "^6.1.5"
+  },
+  "devDependencies": {
+    "colors": "^1.1.2",
+    "diff-json-structure": "^1.0.8",
+    "jsdoc": "^3.4.3",
+    "lodash": "^4.17.4",
+    "mocha": "^3.2.0",
+    "serverless-mocha-plugin": "^1.3.1",
+    "serverless-offline": "^3.5.7",
+    "standard": "^8.6.0"
+  },
+  "scripts": {
+    "start": "nodemon -x 'npm test'",
+    "test": "mocha --no-timeouts"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "David Bal <david.bal37@gmail.com>",
+}
