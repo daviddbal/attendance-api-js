@@ -59,6 +59,22 @@ functions:
     handler: /src/handler.hello
     events:
       - http: GET /hello
+  getDBTime:
+    handler: /src/get-time.dbtime
+    events:
+      - http: GET /dbtime
+  getExample:
+    handler: /src/get-example.handler
+    events:
+      - http: GET /example
+  users:
+    handler: /src/queries.users
+    events:
+      - http: GET /users
+  getTime:
+    handler: /src/queries.time
+    events:
+      - http: GET /time
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events

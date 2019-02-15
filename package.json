@@ -11,7 +11,9 @@
     "axios": "^0.18.0",
     "bunyan": "^1.8.10",
     "config": "^1.25.1",
+    "express": "^4.16.4",
     "http-proxy": "^1.17.0",
+    "i18n": "^0.8.3",
     "jimp": "^0.2.28",
     "jpeg-autorotate": "^3.0.1",
     "lambda-proxy-utils": "^1.2.4",
@@ -19,10 +21,10 @@
     "moment": "^2.18.1",
     "moment-timezone": "^0.5.14",
     "parse-multipart": "^1.0.4",
+    "pg": "^6.1.5",
+    "serverless-http": "^1.9.0",
     "serverless-mocha-plugin": "^1.9.0",
-    "zencoder": "^1.1.0",
-    "i18n": "^0.8.3",
-    "pg": "^6.1.5"
+    "zencoder": "^1.1.0"
   },
   "devDependencies": {
     "colors": "^1.1.2",
@@ -41,5 +43,5 @@
   "repository": {
     "type": "git"
   },
-  "author": "David Bal <david.bal37@gmail.com>",
+  "author": "David Bal <david.bal37@gmail.com>"
 }
