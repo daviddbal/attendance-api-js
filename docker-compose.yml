@@ -2,6 +2,8 @@ version: '3'
 services:
   attendance-api:
     image: attendance-api:latest
+    volumes:
+      - ./src:/usr/src/app/src
     ports:
       - "3000:3000"
     build: .

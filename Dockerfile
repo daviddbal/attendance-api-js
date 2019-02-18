@@ -12,6 +12,8 @@ RUN apk update && \
     npm install -g serverless && \
     npm install -g serverless-offline
 
+RUN apk add bash
+
 EXPOSE 3000
 
 USER node

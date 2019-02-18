@@ -60,6 +60,30 @@ app.get('/users', async function (req, res) {
     }
 });
 
+app.get('/user', async function (req, res) {
+    if (!pgPool) {
+        // Cold start. Get Heroku Postgres creds and create pool.
+        createConn();
+    } else {
+        console.log('Using existing PG connection.');
+    }
+
+    try {
+        const result = await createUser(req, res);
+        let results = JSON.stringify(result);
+
+        res.json({
+            result: results,
+        });
+        return;
+    } catch (e) {
+        res.json({
+            error: e.message,
+        });
+        return;
+    }
+});
+
 app.get('/time', async function (req, res) {
     if (!pgPool) {
         // Cold start. Get Heroku Postgres creds and create pool.
@@ -90,8 +114,20 @@ const getUsers = async () => {
     return result;
 }
 
+const createUser = (request, response) => {
+  const { name, email } = request.body
+
+  pool.query('INSERT INTO users (name, email) VALUES ($1, $2)', [name, email], (error, results) => {
+    if (error) {
+      throw error
+    }
+    response.status(201).send(`User added with ID: ${result.insertId}`)
+  })
+}
+
 module.exports = {
   users: serverless(app),
+  user: serverless(app),
   time: serverless(app)
 //  getUserById,
 //  createUser,
